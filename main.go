@@ -12,7 +12,13 @@ func main() {
 	defer w.Flush()
 
 	var n int
+	var a []int
 
 	fmt.Fscan(r, &n)
+	a = make([]int, n)
+	for i := 0; i < n; i++ {
+		fmt.Fscan(r, &a[i])
+	}
+
 	fmt.Println("Hello, World!")
 }
